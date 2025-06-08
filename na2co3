@@ -1,0 +1,20 @@
+phases:
+- name: sodium_carbonate_gas
+  species: [Na2CO3]
+  thermo: ideal-gas
+  kinetics: none
+  elements: [Na, C, O]
+  state:
+    T: 298.15
+    P: 101325
+    X: Na2CO3:1.0
+
+species:
+- name: Na2CO3
+  composition: {Na: 2, C: 1, O: 3}
+  thermo:
+    model: NASA7
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [200.0, 1000.0, 3.579, 0.00123, -5.0e-7, 1.2e-10, -8.0e-14, -550000, 120.5]
+    - [1000.0, 6000.0, 4.213, 0.00214, -1.0e-7, 3.4e-11, -2.2e-15, -560000, 125.0]
